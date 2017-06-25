@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Very Random Forum | @yield('titleLocation')</title>
+    <title>Gilera Forum | @yield('titleLocation')</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -43,15 +43,15 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <span>Very Random Forum | @yield('titleLocation')</span>
+                    <span>Gilera Forum | @yield('titleLocation')</span>
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route("politics") }}" style="color: greenyellow">Politics</a></li>
-                    <li><a href="{{ route("dankMemes") }}" style="color: orangered">Dank Memes</a></li>
+                    <li><a href="{{ route("politics") }}" style="color: greenyellow">Kleine Vragen</a></li>
+                    <li><a href="{{ route("dankMemes") }}" style="color: orangered">Onderdelen</a></li>
                     <li><a href="{{ route("complaining") }}" style="color: yellow">Complaining</a></li>
                     <li><a href="{{ route("annoyingThings") }}" style="color: mediumpurple">Annoying Things</a></li>
                 </ul>
