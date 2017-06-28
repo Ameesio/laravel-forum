@@ -46,9 +46,9 @@
                             <span style="font-size: 20px; font-weight: bold; border-bottom: 1px dashed black; width: 100%; float: right; padding-left: 5px;">{{ $comment->user->name }}</span>
                             <div style="margin: 5px;">{!! $comment->content !!}</div>
                             <div class="controls" style="width: 100%; border-top: 1px dashed black; padding-left: 5px; padding-top: 5px;">
-                                <a href="{{ route('likeComment', ['postId' => $post->id]) }}"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true" style="margin-right: 5px; color: #449D44"></i></a>
-                                <span style="font-size: 20px;">{{ $comment->likes }}</span>
-                                <a href="{{ route('flagComment', ['postId' => $post->id]) }}"><i class="fa fa-flag fa-2x" aria-hidden="true" style="color: #449D44"></i></a>
+                                <a href="{{ route('likeComment', ['postId' => $post->id, 'commentId' => $comment->id]) }}"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true" style="margin-right: 5px; color: #449D44"></i></a>
+                                <span style="font-size: 20px;"></span>
+                                <a href="{{ route('flagComment', ['postId' => $post->id, 'commentId' => $comment->id]) }}"><i class="fa fa-flag fa-2x" aria-hidden="true" style="color: #449D44"></i></a>
                                 <span style="font-size: 20px;">{{ $comment->flags }}</span>
                                 <span style="float: right; margin: 5px;">{{ $comment->created_at }}</span>
                             </div>

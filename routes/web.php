@@ -25,8 +25,8 @@ Route::get('/showPost/{postId}', 'PostController@showPost')->name('showPost');
 
 //COMMENTCONTROLLER
 Route::post('/postComment/{postId}', 'CommentController@postComment')->name('postComment');
-Route::post('/likeComment/{postId}', 'CommentController@likeComment')->name('likeComment');
-Route::post('/flagComment/{postId}', 'CommentController@flagComment')->name('flagComment');
+Route::post('/likeComment/{postId}/{commentId}', 'CommentController@likeComment')->name('likeComment');
+Route::post('/flagComment/{postId}/{commentId}', 'CommentController@flagComment')->name('flagComment');
 
 //HOMECONTROLLER ROUTES
 Route::get('/home', 'HomeController@index')->name('home');
