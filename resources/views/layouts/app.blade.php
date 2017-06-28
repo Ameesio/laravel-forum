@@ -64,10 +64,10 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="">Zulu</a>
-                                <a href="">GSM</a>
-                                <a href="">Runner</a>
-                                <a href="">Citta</a>
+                                <a href="{{ route('modelPagina', ['modelNaam' => 'Zulu']) }}">Zulu</a>
+                                <a href="{{ route('modelPagina', ['modelNaam' => 'GSM']) }}">GSM</a>
+                                <a href="{{ route('modelPagina', ['modelNaam' => 'Runner']) }}">Runner</a>
+                                <a href="{{ route('modelPagina', ['modelNaam' => 'Citta']) }}">Citta</a>
                             </li>
                         </ul>
                     </li>

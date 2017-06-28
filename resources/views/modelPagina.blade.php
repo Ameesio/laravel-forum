@@ -1,18 +1,25 @@
 @extends('layouts.app')
 
 @section('titleLocation')
-    My Account
+    @if($modelNaam == 'Zulu')
+        Zulu
+    @elseif($modelNaam == 'GSM')
+        GSM
+    @elseif($modelNaam == 'Runner')
+        Runner
+    @elseif($modelNaam == 'Citta')
+        Citta
+    @endif
 @endsection
 
 @section('content')
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" style="box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75); background-color: whitesmoke; padding-top: 10px;">
-                    <span style="width: 100%; text-align: center; float: right; font-size: 50px; border-bottom: 1px solid black;">Your Account</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75); background-color: whitesmoke;">
+                <div class="posts" style="">
                     @foreach($posts as $post)
                         <div id="post{{ $post->id }}" style="margin-bottom: 50px; height: auto; padding-bottom: 10px; width: 100%;">
-                                <a href="{{ route('deletePost', ['postId' => $post->id]) }}"><i class="fa fa-trash fa-2x" aria-hidden="true" style="color: red; cursor: pointer; float: right;"></i></a>
                             <h1 class="postTitle" style="font-size: 25px; color: steelblue;">{{ $post->title }}
                                 <span style="font-size: 15px; color:red; font-weight: bold;">Grote Vragen</span>
                             </h1>
@@ -27,5 +34,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </body>
 @endsection
+

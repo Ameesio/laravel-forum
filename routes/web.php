@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('/', 'PostController@homePosts')->name('homePosts');
 Route::post('/myAccount', 'PostController@newPost')->name('newPost');
 Route::get('/showPost/{postId}', 'PostController@showPost')->name('showPost');
+Route::get('/deletePost/{postId}', 'PostController@deletePost')->name('deletePost');
 
 //COMMENTCONTROLLER
 Route::post('/postComment/{postId}', 'CommentController@postComment')->name('postComment');
@@ -40,3 +41,4 @@ Route::get('/createPost', 'DestinationController@createPost')->name('createPost'
 Route::get('/kleineVragen', 'DestinationController@kleineVragen')->name('kleineVragen');
 Route::get('/groteVragen', 'DestinationController@groteVragen')->name('groteVragen');
 Route::get('/onderdelen', 'DestinationController@onderdelen')->name('onderdelen');
+Route::get('/modelPagina/{modelNaam}', 'DestinationController@modelPagina')->name('modelPagina');
