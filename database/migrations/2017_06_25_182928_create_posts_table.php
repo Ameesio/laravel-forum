@@ -15,6 +15,11 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('title');
+            $table->longText('content');
+            $table->enum('section', ['kleineVragen', 'groteVragen' ,'onderdelen',]);
+            $table->enum('model', ['GSM', 'Zulu' ,'Runner', '200', '300', '600', 'Apache', 'Coguar', 'Crono', 'CX', 'DNA', 'ER', 'Fastbike', 'Freestyle', 'GFR', 'GP', 'KK', 'MX', 'Nexus', 'NGR', 'Citta']);
             $table->timestamps();
         });
     }

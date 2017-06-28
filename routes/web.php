@@ -15,11 +15,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//AUTH ROUTES
 Auth::routes();
 
+//POSTCONTROLLER ROUTES
+Route::get('/', 'PostController@homePosts')->name('homePosts');
+Route::post('/myAccount', 'PostController@newPost')->name('newPost');
+Route::get('/showPost/{postId}', 'PostController@showPost')->name('showPost');
+
+//COMMENTCONTROLLER
+Route::post('/postComment/{postId}', 'CommentController@postComment')->name('postComment');
+Route::post('/likeComment/{postId}', 'CommentController@likeComment')->name('likeComment');
+Route::post('/flagComment/{postId}', 'CommentController@flagComment')->name('flagComment');
+
+//HOMECONTROLLER ROUTES
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/politics', 'DestinationController@politics')->name('politics');
-Route::get('/dankmemes', 'DestinationController@dankMemes')->name('dankMemes');
-Route::get('/complaining', 'DestinationController@complaining')->name('complaining');
-Route::get('/annoyingthings', 'DestinationController@annoyingThings')->name('annoyingThings');
+//USERCONTROLLER ROUTES
+Route::get('/myAccount', 'UserController@myAccount')->name('myAccount');
+Route::get('/showUser/{userId}', 'UserController@showUser')->name('showUser');
+
+//DESTINATIONCONTROLLER ROUTES
+Route::get('/createPost', 'DestinationController@createPost')->name('createPost');
+Route::get('/kleineVragen', 'DestinationController@kleineVragen')->name('kleineVragen');
+Route::get('/groteVragen', 'DestinationController@groteVragen')->name('groteVragen');
+Route::get('/onderdelen', 'DestinationController@onderdelen')->name('onderdelen');

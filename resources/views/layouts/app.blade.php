@@ -26,6 +26,11 @@
     </script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
+    <style>
+        html {
+            font-family: 'Tahoma';
+        }
+    </style>
 </head>
 <body style="height: 100%; width: 100%; margin: 0px; padding: 0px;">
 <div id="app" style=" margin: 0px; padding: 0px;">
@@ -50,10 +55,22 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route("politics") }}" style="color: greenyellow">Kleine Vragen</a></li>
-                    <li><a href="{{ route("dankMemes") }}" style="color: orangered">Onderdelen</a></li>
-                    <li><a href="{{ route("complaining") }}" style="color: yellow">Complaining</a></li>
-                    <li><a href="{{ route("annoyingThings") }}" style="color: mediumpurple">Annoying Things</a></li>
+                    <li><a href="{{ route("kleineVragen") }}" style="color: purple">Kleine Vragen</a></li>
+                    <li><a href="{{ route("groteVragen") }}" style="color: orangered">Grote Vragen</a></li>
+                    <li><a href="{{ route("onderdelen") }}" style="color: yellow">Onderdelen</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: powderblue">
+                            Gileras<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="">Zulu</a>
+                                <a href="">GSM</a>
+                                <a href="">Runner</a>
+                                <a href="">Citta</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -71,6 +88,12 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('myAccount') }}">My Account</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('createPost') }}">Create Post</a>
+                                </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
