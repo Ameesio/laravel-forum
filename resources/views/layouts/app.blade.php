@@ -89,10 +89,13 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('myAccount') }}">My Account</a>
+                                    <a href="{{ route('myAccount') }}">My Posts</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('createPost') }}">Create Post</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('customiseAccount') }}">Customise Account</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"

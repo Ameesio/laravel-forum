@@ -42,3 +42,4 @@ Route::get('/kleineVragen', 'DestinationController@kleineVragen')->name('kleineV
 Route::get('/groteVragen', 'DestinationController@groteVragen')->name('groteVragen');
 Route::get('/onderdelen', 'DestinationController@onderdelen')->name('onderdelen');
 Route::get('/modelPagina/{modelNaam}', 'DestinationController@modelPagina')->name('modelPagina');
+Route::get('/customiseAccount', 'DestinationController@customiseAccount')->name('customiseAccount');
