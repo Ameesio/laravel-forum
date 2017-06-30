@@ -94,6 +94,18 @@
                                 <li>
                                     <a href="{{ route('createPost') }}">Create Post</a>
                                 </li>
+                                @if(Auth::user()->permission == 'moderator')
+                                    <li>
+                                        <a href="{{ route('moderatorPanel') }}">Moderator Panel</a>
+                                    </li>
+                                @else
+                                @endif
+                                @if(Auth::user()->permission == 'admin')
+                                    <li>
+                                        <a href="{{ route('adminPanel') }}">Admin Panel</a>
+                                    </li>
+                                @else
+                                @endif
                                 <li>
                                     <a href="{{ route('customiseAccount') }}">Customise Account</a>
                                 </li>

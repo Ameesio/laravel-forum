@@ -43,3 +43,5 @@ Route::get('/groteVragen', 'DestinationController@groteVragen')->name('groteVrag
 Route::get('/onderdelen', 'DestinationController@onderdelen')->name('onderdelen');
 Route::get('/modelPagina/{modelNaam}', 'DestinationController@modelPagina')->name('modelPagina');
 Route::get('/customiseAccount', 'DestinationController@customiseAccount')->name('customiseAccount');
+Route::get('/moderatorPanel', 'DestinationController@moderatorPanel')->name('moderatorPanel');
+Route::get('/adminPanel', 'DestinationController@adminPanel')->name('adminPanel');
